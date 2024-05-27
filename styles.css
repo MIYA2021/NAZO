@@ -1,0 +1,102 @@
+/* imdex html h1フォント設定 */
+h1.top1{
+    margin-top: 15px;
+    width: 500px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+p.top1{
+    margin-top: 15px;
+    width: 100px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* 全般 */
+body {
+    background-color: #000;
+    color: #f00;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+  
+/* IDコンテナ */
+summary {
+    font-size: 30px; /* フォントサイズを18ピクセルに設定 */
+}
+details[open] summary {
+    padding-right: 100px; /* 開いた状態の＞とテキストの間隔を狭くする */
+}
+.ID {
+    max-width: 250px;
+    margin: 0 auto;
+    padding: 20px;
+}
+  
+/* ボタン */
+button {
+    padding: 10px 20px;
+    background-color: #f00;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+  
+button:hover {
+    background-color: #900;
+}
+  
+/* プロフィール */
+.profile {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+  
+.profile p {
+    margin: 0;
+    color: #fff;
+}
+  
+.profile p span {
+    font-weight: bold;
+    color: #f00;
+}
+  
+/* 回答欄 */
+.answer-section {
+    margin-top: 15px;
+    width: 300px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #f00; /* ボーダー色を赤に変更 */
+    border-radius: 5px;
+    resize: vertical;
+    color: #f00; /* テキストの色を赤に設定 */
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box; /* paddingやborderを含めた全体の幅にする */
+}
+  
+/* 応答スペース */
+#response {
+    margin-top: 20px;
+    color: #fff; /* テキストの色を白に設定 */
+    font-family: 'Arial', sans-serif;
+}
