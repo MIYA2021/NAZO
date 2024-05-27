@@ -28,13 +28,14 @@ function toggleProfile() {
   
   // ページ読み込み時に既存のプロフィールがあれば表示
   window.addEventListener('load', () => {
+    generateProfile(); // ページ読み込み時にプロフィールを生成して表示する
     const savedProfile = localStorage.getItem('profile');
     if (savedProfile) {
-      const { id, password } = JSON.parse(savedProfile);
-      document.getElementById('id').textContent = id;
-      document.getElementById('password').textContent = password;
+        const { id, password } = JSON.parse(savedProfile);
+        document.getElementById('id').textContent = id;
+        document.getElementById('password').textContent = password;
     }
-  });
+});
   
   function submitAnswer() {
     var answer = document.getElementById('answer').value.toLowerCase(); // 回答を小文字に変換する
