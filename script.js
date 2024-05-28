@@ -2,6 +2,15 @@ function toggleProfile() {
     var profile = document.getElementById('profile');
     profile.classList.toggle('show');
   }
+
+  window.addEventListener('load', () => {
+    const savedProfile = localStorage.getItem('profile');
+    if (savedProfile) {
+        const { id, password } = JSON.parse(savedProfile);
+        document.getElementById('id').textContent = id;
+        document.getElementById('password').textContent = password;
+    }
+});
   
   function generateProfile() {
     // ランダムなIDとパスワードを生成
@@ -25,16 +34,6 @@ function toggleProfile() {
     }
     return result;
   }
-  
-  window.addEventListener('load', () => {
-    const savedProfile = localStorage.getItem('profile');
-    if (savedProfile) {
-        const { id, password } = JSON.parse(savedProfile);
-        document.getElementById('id').textContent = id;
-        document.getElementById('password').textContent = password;
-    }
-});
-
   
   function submitAnswer() {
     var answer = document.getElementById('answer').value.toLowerCase(); // 回答を小文字に変換する
