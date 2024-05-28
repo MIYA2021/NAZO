@@ -3,14 +3,6 @@ function toggleProfile() {
     profile.classList.toggle('show');
   }
 
-  window.addEventListener('load', () => {
-    const savedProfile = localStorage.getItem('profile');
-    if (savedProfile) {
-        const { id, password } = JSON.parse(savedProfile);
-        document.getElementById('id').textContent = id;
-        document.getElementById('password').textContent = password;
-    }
-});
   
   function generateProfile() {
     // ランダムなIDとパスワードを生成
@@ -24,7 +16,14 @@ function toggleProfile() {
     // ローカルストレージに保存
     localStorage.setItem('profile', JSON.stringify({ id, password }));
   }
-  
+  window.addEventListener('load', () => {
+    const savedProfile = localStorage.getItem('profile');
+    if (savedProfile) {
+        const { id, password } = JSON.parse(savedProfile);
+        document.getElementById('id').textContent = id;
+        document.getElementById('password').textContent = password;
+    }
+});
   // ランダムな文字列を生成する関数
   function generateRandomString(length) {
     let result = '';
