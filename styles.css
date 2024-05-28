@@ -81,6 +81,9 @@ button:hover {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.result-container {
+    position: relative;
+}
 
 textarea {
     width: 100%;
@@ -98,4 +101,10 @@ textarea {
     margin-top: 20px;
     color: #fff; /* テキストの色を白に設定 */
     font-family: 'Arial', sans-serif;
+}
+#resultImage {
+    display: block;
+    margin: 0 auto;
+    width: 200px; /* 画像の幅を200pxに設定 */
+    height: auto; /* 高さを自動的に調整してアスペクト比を維持 */
 }
