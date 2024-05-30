@@ -1,38 +1,4 @@
-function toggleProfile() {
-    var profile = document.getElementById('profile');
-    profile.classList.toggle('show');
-  }
-
-  
-  function generateProfile() {
-    // ランダムなIDとパスワードを生成
-    const id = generateRandomString(8);
-    const password = generateRandomString(12);
-  
-    // 生成したIDとパスワードを表示
-    document.getElementById('id').textContent = id;
-    document.getElementById('password').textContent = password;
-  
-    // ローカルストレージに保存
-    localStorage.setItem('profile', JSON.stringify({ id, password }));
-  }
-  window.addEventListener('load', () => {
-    const savedProfile = localStorage.getItem('profile');
-    if (savedProfile) {
-        const { id, password } = JSON.parse(savedProfile);
-        document.getElementById('id').textContent = id;
-        document.getElementById('password').textContent = password;
-    }
-});
-  // ランダムな文字列を生成する関数
-  function generateRandomString(length) {
-    let result = '';
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    for (let i = 0; i < length; i++) {
-      result += characters.charAt(Math.floor(Math.random() * characters.length));
-    }
-    return result;
-  }
+f
   
   function submitAnswer() {
     var answer = document.getElementById('answer').value.toLowerCase(); // 回答を小文字に変換する
