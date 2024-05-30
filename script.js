@@ -1,6 +1,4 @@
-f
-  
-  function submitAnswer() {
+ function submitAnswer() {
     var answer = document.getElementById('answer').value.toLowerCase(); // 回答を小文字に変換する
     var responseSpace = document.getElementById('response');
 
@@ -46,8 +44,17 @@ f
   function showNextButton() {
     var nextButton = document.getElementById('nextButton');
     nextButton.style.display = "block"; // 次へのボタンを表示する
-}
+  }
+
+  /*今回使用していないが、以下のプログラムはボタンを押すとnext,htmlに飛ぶ仕組みになっている
+
 document.getElementById("nextButton").addEventListener("click", function() {
   window.location.href = "next.html"; // next.htmlにリダイレクト
 });
+ 使用するときは こめとスラッシュを削除                  */
 
+/* 次へ押した後 クリアメッセージ*/
+document.getElementById("nextButton").addEventListener("click", function() {
+  var congratulationsMessage = document.getElementById("congratulationsMessage");
+  congratulationsMessage.textContent = "テストプレイ!!クリアおめでとう!!"; // メッセージを表示する
+});
