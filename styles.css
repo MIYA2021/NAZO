@@ -24,19 +24,6 @@ body {
     padding: 0;
 }
   
-/* IDコンテナ */
-summary {
-    font-size: 30px; /* フォントサイズを18ピクセルに設定 */
-}
-details[open] summary {
-    padding-right: 100px; /* 開いた状態の＞とテキストの間隔を狭くする */
-}
-.ID {
-    max-width: 250px;
-    margin: 0 auto;
-    padding: 20px;
-}
-  
 /* ボタン */
 button {
     padding: 10px 20px;
@@ -53,23 +40,6 @@ button {
   
 button:hover {
     background-color: #900;
-}
-/* プロフィール */
-.profile {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-  
-.profile p {
-    margin: 0;
-    color: #fff;
-}
-  
-.profile p span {
-    font-weight: bold;
-    color: #f00;
 }
   
 /* 回答欄 */
