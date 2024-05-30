@@ -87,3 +87,11 @@ textarea {
     left: 50%; /* 左端を画面の水平方向中央に配置します */
     transform: translate(-50%, -50%); /* 中央揃えのために要素を左上から中央に移動します */
   }
+.A3{
+    position: absolute;
+    top: 470px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+}
