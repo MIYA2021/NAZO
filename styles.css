@@ -81,3 +81,9 @@ textarea {
   justify-content: center; /* 水平方向の中央揃え */
   align-items: center; /* 垂直方向の中央揃え */
 }
+.A2 {
+    position: fixed; /* 要素を固定位置に配置します */
+    top: 50%; /* 上端を画面の垂直方向中央に配置します */
+    left: 50%; /* 左端を画面の水平方向中央に配置します */
+    transform: translate(-50%, -50%); /* 中央揃えのために要素を左上から中央に移動します */
+  }
