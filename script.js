@@ -40,11 +40,12 @@
     }, 2000);
   }
   
-  /*正解し次の問題へ行くボタン類 */
+  /*正解し次の問題へ行くボタン類 
   function showNextButton() {
     var nextButton = document.getElementById('nextButton');
     nextButton.style.display = "block"; // 次へのボタンを表示する
   }
+*/
 
   /*今回使用していないが、以下のプログラムはボタンを押すとnext,htmlに飛ぶ仕組みになっている
 
@@ -53,8 +54,12 @@ document.getElementById("nextButton").addEventListener("click", function() {
 });
  使用するときは こめとスラッシュを削除                  */
 
-/* 次へ押した後 クリアメッセージ*/
+
+/* 次へ押した後 クリアメッセージ
+
 document.getElementById("nextButton").addEventListener("click", function() {
   var congratulationsMessage = document.getElementById("congratulationsMessage");
   congratulationsMessage.textContent = "テストプレイ!!クリアおめでとう!!"; // メッセージを表示する
 });
+
+*/
