@@ -96,9 +96,12 @@ updateText('ようこそ謎へ　画面をタップしてください');
 document.addEventListener('DOMContentLoaded', function() {
     const body = document.querySelector('body');
     
-    // タップされたときの処理を設定する
-    body.addEventListener('touchstart', function() {
+    // クリックまたはタップされたときの処理を設定する
+    const handleClick = function() {
         // 別のHTMLページに移動する
         window.location.href = 'top.html';
-    });
+    };
+
+    body.addEventListener('click', handleClick);
+    body.addEventListener('touchstart', handleClick);
 });
