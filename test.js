@@ -6,9 +6,8 @@ let intervalMap = new Map();
 function createLetters(text, rad, offset, frontColor, direction, id) {
     const radius = rad;
     let letters = text.split('');
-    if(direction != 'backwards') { letters = letters.reverse(); }
-    let dir = ( direction == 'backwards') ? -1 : 1;
-    
+    if(direction !== 'backwards') { letters = letters.reverse(); }
+    let dir = ( direction === 'backwards') ? -1 : 1;
 
     const container = document.createElement('div');
     container.classList.add('text-container');
@@ -36,7 +35,9 @@ function createLetters(text, rad, offset, frontColor, direction, id) {
 
     if (!intervalMap.has(id)) {
         const intervalId = setInterval(() => {
-            updateLetters(container, letters.length, 0.54, 1, frontColor, dir, id);
+            requestAnimationFrame(() => {
+                updateLetters(container, letters.length, 0.54, 1, frontColor, dir, id);
+            });
         }, updateInterval);
         intervalMap.set(id, intervalId);
     }
@@ -61,27 +62,25 @@ function updateLetters(container, totalLetters, op1, op2, colorFront, dir, id) {
     });
 }
 
-
-
 function isMobileDevice() {
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 }
-if (isMobileDevice()) {
-    createLetters(" ⟩ Revolving Text ⟩ Revolving Text", 124, 0, 'white' , 'forwards', 'set1');
-} else {
-    createLetters(" ⟩ Revolving Text ⟩ Revolving Text", 124, 0, 'white' , 'forwards','set1');
-    createLetters(" ⟨ Revolving Text ⟨ Revolving Text ⟨ Revolving Text", 200, 0, 'white', 'backwards','set2');
-}
 
-
-function updateText(newText) {
+function clearTextContainers() {
     document.querySelectorAll('.text-container').forEach(container => {
         container.remove();
     });
+}
 
-    startTimeMap.clear();
+function clearIntervals() {
     intervalMap.forEach(intervalId => clearInterval(intervalId));
     intervalMap.clear();
+}
+
+function updateText(newText) {
+    clearTextContainers();
+    startTimeMap.clear();
+    clearIntervals();
 
     if (isMobileDevice()) {
         createLetters(` ⟩ ${newText} ⟩ ${newText}`, 124, 0, 'white' , 'forwards', 'set1');
@@ -100,6 +99,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // タップされたときの処理を設定する
     body.addEventListener('touchstart', function() {
         // 別のHTMLページに移動する
-        window.location.href = 'index.html';
+        window.location.href = 'top.html';
     });
 });
