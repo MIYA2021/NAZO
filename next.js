@@ -18,7 +18,7 @@ function submitAnswer() {
   
   function showImage() {
     var image = document.getElementById('resultImage');
-    image.src = "q1.jpg"; // 正解画像のパスを設定
+    image.src = "q2.jpg"; // 正解画像のパスを設定
     image.style.display = "block"; // 画像を表示する
   }
   
