@@ -1,0 +1,98 @@
+/* imdex html h1フォント設定 */
+h1.top1{
+    margin-top: 15px;
+    width: 500px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+p.top1{
+    margin-top: 15px;
+    width: 100px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* 全般 */
+body {
+    overflow: hidden;
+    background-color: #000;
+    color: #f00;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+  
+/* ボタン */
+button {
+    padding: 10px 20px;
+    background-color: #f00;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+  
+button:hover {
+    background-color: #900;
+}
+  
+/* 回答欄 */
+.answer-section {
+    margin-top: 15px;
+    width: 300px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #f00; /* ボーダー色を赤に変更 */
+    border-radius: 5px;
+    resize: vertical;
+    color: #f00; /* テキストの色を赤に設定 */
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box; /* paddingやborderを含めた全体の幅にする */
+}
+  
+/* 応答スペース */
+#response {
+    margin-top: 20px;
+    color: #fff; /* テキストの色を白に設定 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#resultImage {
+    display: block;
+    margin: 0 auto;
+    width: 200px; /* 画像の幅を200pxに設定 */
+    height: auto; /* 高さを自動的に調整してアスペクト比を維持 */
+}
+#A1{
+  display: flex;
+  justify-content: center; /* 水平方向の中央揃え */
+  align-items: center; /* 垂直方向の中央揃え */
+}
+.A2 {
+    position: fixed; /* 要素を固定位置に配置します */
+    top: 50%; /* 上端を画面の垂直方向中央に配置します */
+    left: 50%; /* 左端を画面の水平方向中央に配置します */
+    transform: translate(-50%, -50%); /* 中央揃えのために要素を左上から中央に移動します */
+  }
+.A3{
+    position: absolute;
+    top: 470px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+}
