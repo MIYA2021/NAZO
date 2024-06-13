@@ -18,7 +18,7 @@
   
   function showImage() {
     var image = document.getElementById('resultImage');
-    image.src = "https://github.com/MIYA2021/nazo.github.io/blob/main/img/q1.jpg?raw=true"; // 正解画像のパスを設定
+    image.src = "https://github.com/MIYA2021/nazo.github.io/blob/main/img/無題117_20240613094415.png?raw=true"; // 正解画像のパスを設定
     image.style.display = "block"; // 画像を表示する
   }
   
